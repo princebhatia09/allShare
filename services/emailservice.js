@@ -19,7 +19,7 @@ async function sendMail({from,to,subject,text,html}){
         html:html
       };
 
-      let info = await transporter.sendMail(mailOptions,function(error,info){
+      await transporter.sendMail(mailOptions,function(error,info){
 
             if (error){
                 console.log(error)
